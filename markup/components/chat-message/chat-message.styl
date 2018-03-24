@@ -1,0 +1,37 @@
+.chat-message
+    display: flex
+    min-height: 50px
+    max-height: 164px
+    border-top: 1px solid #2a3e53
+    flex-shrink: 0
+    position: relative
+    padding: 15px
+.chat-editor
+    flex-grow: 1
+    font-size: 13px
+    font-weight: 400
+    line-height: 18px
+    outline: none
+    &:empty:before
+        content: attr(placeholder)
+        color: #b1c3d5;
+    &__container
+        width: calc(100% - 50px)
+        overflow-y: scroll
+        padding-right: 10px
+
+.chat-send-btn
+    position: absolute
+    right: 10px
+    bottom: 9px
+    background: transparent
+    border: none
+    outline: none
+    svg
+        transition: fill .3s ease
+        fill: #b1c3d5
+.chat-message:focus-within
+    .chat-send-btn
+        svg
+            fill: #4a90e2
+

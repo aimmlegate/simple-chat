@@ -1,0 +1,94 @@
+// GUI stylies of the project
+// For example, styles of the links, buttons and so on.
+
+.container
+    display: flex
+    justify-content: center
+    align-items: center
+    height 100vh
+
+.chat-window
+    width 100%
+    height 100%
+    background-color: #19222d
+    display: flex
+    flex-direction: column
+    font-size: 13px
+    font-weight: 600
+    color: #fff
+
+
+
+        
+
+        
+.chat-content
+    flex-grow: 1
+    overflow-y: scroll;
+
+
+.chat-content::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+.chat-content::-webkit-scrollbar {
+    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.chat-content::-webkit-scrollbar {
+  background-color: #2a3e53;
+}
+
+
+
+.custom-checkbox
+    display flex
+    justify-content: space-between;
+    align-items: center
+    cursor: pointer;
+    input 
+        display: none
+
+.checkmark
+    width: 32px;
+    height: 20px;
+    background: #2a3e53;
+    border-radius: 20px;
+    position: relative
+    transition: background .3s ease
+    &:before
+        content: ''
+        display: block
+        position absolute
+        left: 1px
+        top: 1px
+        width: 18px
+        height 18px
+        border-radius: 50%
+        background: #19222d;
+        transition: left .3s ease
+.custom-checkbox input:checked ~ .checkmark
+    background: #2ea6ff
+    &:before
+        left 12px
+
+
+.nice-scroll::-webkit-scrollbar 
+    width: 5px;
+
+ 
+ 
+.nice-scroll::-webkit-scrollbar-thumb 
+    background-color: #2a3e53
+
+.nice-scroll::-webkit-scrollbar-track
+    background: #19222d
+
+.select-window  
+    font-size: 15px
+
+    ul
+        width: 100%
+        display: flex
+    a
+        color: #ffffff
